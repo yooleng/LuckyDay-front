@@ -68,7 +68,7 @@ export default function ReviewLuckyDayPage() {
       imageDelete: isImageDeleted ? 1 : 0,
     };
 
-    const imageToUpload: File | null = data.image ? data.image : null;
+    const imageToUpload: File | null = data.image || null;
 
     const mutationPayload = {
       body: reviewReqDto,
