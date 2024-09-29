@@ -11,7 +11,8 @@ export default function SendFeedbackMessage({
   const surveyFormUrl = import.meta.env.VITE_SURVEY_FORM;
 
   const handleConfirmClick = () => {
-    window.location.href = surveyFormUrl;
+    window.open(surveyFormUrl, "_blank", "noopener,noreferrer");
+    onClose();
   };
 
   const handleCancelClick = () => {
