@@ -62,16 +62,7 @@ export default function ReviewLuckyDayPage() {
       review: data.review,
     };
 
-    let imageToUpload: File | null = data.image;
-
-    if (!data.image && existingImageUrl && !isDefaultImage) {
-      // 이미지를 변경하지 않은 경우, 기존 이미지를 다시 서버에 전송하기 위해 Blob 형태로 변환
-      const response = await fetch(existingImageUrl);
-      const blob = await response.blob();
-      imageToUpload = new File([blob], "existingImage.png", {
-        type: blob.type,
-      });
-    }
+    const imageToUpload: File | null = data.image ? data.image : null;
 
     const mutationPayload = {
       body: reviewReqDto,
