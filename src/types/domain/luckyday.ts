@@ -85,6 +85,7 @@ export interface GetLuckyDayCycleDetail {
   dday: number;
   order: number;
   date: string;
+  reviewCheck: number;
 }
 
 export interface GetLuckyDayCycleLastLuckyDaysQueryModel {
@@ -113,6 +114,7 @@ export interface GetLuckyDayCycleDetailResponse {
 export interface ReviewReqDto {
   dtlNo: number;
   review: string;
+  imageDelete: number; // 0 = 유지, 1 = 삭제
 }
 
 export interface ReviewFormData {
