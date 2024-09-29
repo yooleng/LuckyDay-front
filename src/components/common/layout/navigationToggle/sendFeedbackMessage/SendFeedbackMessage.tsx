@@ -37,6 +37,6 @@ export default function SendFeedbackMessage({
       baseLabel="바로가기"
       handleCancelClick={handleCancelClick}
       handleBaseClick={handleConfirmClick}
-    ></ConfirmModal>
+    />
   );
 }

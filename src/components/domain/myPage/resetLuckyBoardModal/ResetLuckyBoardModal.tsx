@@ -38,6 +38,6 @@ export default function ResetLuckyBoardModal({
       baseLabel="초기화"
       handleCancelClick={handleCancelClick}
       handleBaseClick={handleResetlick}
-    ></ConfirmModal>
+    />
   );
 }
